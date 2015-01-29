@@ -1,6 +1,6 @@
-package com.studentproject.stayconnect;
+/*package com.studentproject.stayconnect;
 
-/*import android.content.ContentValues;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -240,6 +240,7 @@ public class DataConnection {
 
     }
 
-}*/
+}
 
 
+*/
