@@ -37,7 +37,7 @@ public class LoadScreenActivity extends ActionBarActivity {
 
                 } finally {
 
-                    Intent i = new Intent(LoadScreenActivity.this, MainActivity.class);
+                    Intent i = new Intent(getApplicationContext(), TestDatabaseActivity.class);
 
                     startActivity(i);
                     finish();

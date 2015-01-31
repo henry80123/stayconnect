@@ -10,7 +10,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
 {
 
     final String tag="db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 5;
     private static final String DATABASE_NAME = "appstorage.db";
 
 
@@ -31,29 +31,29 @@ public class DatabaseUtil extends SQLiteOpenHelper
     {
         // Create Database itself
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        Log.d(tag,"CreateDatabase: Creating the database - constructor");
+        Log.d(tag,"DatabaseUtil: Creating the database - constructor");
     }
 
     @Override
     public void onCreate(SQLiteDatabase database)
     {
         //database.execSQL(DATABASE_CREATE);
-        Log.d(tag,"CreateDatabase: Inside onCreate() ");
+        Log.d(tag,"DatabaseUtil: Inside onCreate() ");
         database.execSQL(create_acronym);
-        Log.d(tag,"CreateDatabase: Creating the Table Acronym \n SQL: "+create_acronym);
+        Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL: "+create_acronym);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        Log.w(DatabaseUtil.class.getName(), "Upgrading database from version " + oldVersion + " to " + newVersion + ", which will destroy all old data");
-        Log.d(tag,"CreateDatabase: Starting to destroy data ");
+        Log.v(DatabaseUtil.class.getName(), "Upgrading database from version " + oldVersion + " to " + newVersion + ", which will destroy all old data");
+        Log.d(tag,"DatabaseUtil: Starting to destroy data ");
 
-        db.execSQL("DROP TABLE IF EXISTS " + create_acronym);
-        Log.d(tag,"CreateDatabase: Finished to destroy data ");
+        db.execSQL("DROP TABLE IF EXISTS " + acronym_table);
+        Log.d(tag,"DatabaseUtil: Finished to destroy data ");
 
         onCreate(db);
-        Log.d(tag,"CreateDatabase: Finished to calling ONCREATE");
+        Log.d(tag,"DatabaseUtil: Finished to calling ONCREATE");
     }
 
 }
