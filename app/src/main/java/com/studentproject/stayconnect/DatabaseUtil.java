@@ -10,19 +10,21 @@ public class DatabaseUtil extends SQLiteOpenHelper
 {
 
     final String tag="db";
-    private static final int DATABASE_VERSION = 5;
-    private static final String DATABASE_NAME = "appstorage.db";
+    private static final int DATABASE_VERSION = 6;
+    private static final String DATABASE_NAME = "appStorage.db";
 
 
     //------------------------------ ACRONYM TABLE --------------------------------------
 
-    public static final String acronym_table = "acronym_tbl";
+    public static final String acronym_table = "acronym_table";
+
+    //ACRONYM TABLE COLUMNS names
     public static final String acronym = "acronym";
-    public static final String full_form = "fullform";
+    public static final String full_form = "full_form";
     public static final String dept = "dept";
 
-    private static final String create_acronym = "create table " + acronym_table + "(" + acronym + " varchar primary key, " +
-            full_form + " text not null, " + dept + " text); ";
+    private static final String create_acronym = "create table " + acronym_table + "(" + acronym + " varchar primary key," +
+            full_form + " text not null," + dept + " text" + ")";
 
     //------------------------------------------------------------------------------------
 
@@ -40,7 +42,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
         //database.execSQL(DATABASE_CREATE);
         Log.d(tag,"DatabaseUtil: Inside onCreate() ");
         database.execSQL(create_acronym);
-        Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL: "+create_acronym);
+        Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL:" + create_acronym);
     }
 
     @Override

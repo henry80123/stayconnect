@@ -2,12 +2,14 @@ package com.studentproject.stayconnect;
 
 
         import android.app.ListActivity;
+        import android.content.Intent;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
         import android.widget.EditText;
         import android.widget.ListView;
+        import android.widget.TextView;
 
         import java.util.List;
 
@@ -15,7 +17,7 @@ package com.studentproject.stayconnect;
 public class TestDatabaseActivity extends ListActivity {
 
 
-    private DataConnection datasource;
+    private DataConnection dataConnection;
     EditText Input;
     String tag = "db";
 
@@ -24,16 +26,16 @@ public class TestDatabaseActivity extends ListActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acronym_testing);
-        datasource = new DataConnection(this);
+        dataConnection = new DataConnection(this);
         try{
-            datasource.open();
+            dataConnection.open();
         }
         catch (Exception e)
         { }
 
 
 
-        List<Acronym> values = datasource.getAllAcronym();
+        List<Acronym> values = dataConnection.getAllAcronym();
 
         Input = (EditText) findViewById(R.id.input);
         // use the SimpleCursorAdapter to show the
@@ -45,7 +47,13 @@ public class TestDatabaseActivity extends ListActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(getApplicationContext(),SingleAcronymActivity.class);
 
+                String num = ((TextView) view).getText().toString();
+
+
+                i.putExtra("acronym", num);
+                startActivity(i);
 
 
 
@@ -93,7 +101,7 @@ public class TestDatabaseActivity extends ListActivity {
                 if(aacronym.length() > 0 )
                 {
                     // save the new comment to the database
-                    acronym = datasource.registerAcronym(aacronym, ff,  depts);
+                    acronym = dataConnection.registerAcronym(aacronym, ff,  depts);
                     adapter.add(acronym);
                     Input.setText("");
                 }
@@ -109,7 +117,7 @@ public class TestDatabaseActivity extends ListActivity {
     protected void onResume() {
         try
         {
-            datasource.open();
+            dataConnection.open();
         }catch (Exception e)
         {
 
@@ -119,7 +127,7 @@ public class TestDatabaseActivity extends ListActivity {
 
     @Override
     protected void onPause() {
-        datasource.close();
+        dataConnection.close();
         super.onPause();
     }
 

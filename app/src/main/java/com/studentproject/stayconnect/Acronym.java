@@ -6,10 +6,10 @@ public class Acronym {
     private String full_form;
     private String dept;
 
-    public Acronym(String acronym, String fullform, String dept) {
+    public Acronym(String acronym, String full_form, String dept) {
         this.acronym = acronym;
         this.dept = dept;
-        this.full_form = fullform;
+        this.full_form = full_form;
     }
 
     public void setAcronym(String acronym) {
@@ -47,8 +47,11 @@ public class Acronym {
     }
 
     @Override
+    //public String toString() {return ("Acronym: "+ this.acronym );
+    //edited
     public String toString() {
-        return ("Acronym: "+ this.acronym );
+        return (this.acronym );
+
     }
 
     public static boolean Validate(Acronym temp)

@@ -8,79 +8,93 @@
     android:orientation="horizontal"
     tools:context=".GridXMLActivity" >
 
-    <Button android:id="@+id/notification"
+    <Button android:id="@+id/database_testing"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="0"
-        android:text="Notification"
+        android:onClick="toTestDatabaseActivity"
+        android:text="Database Testing"
         />
 
-    <Button android:id="@+id/staff_offers"
+    <Button android:id="@+id/acronym_list"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="1"
-        android:text="Staff Offers"
+        android:onClick="toDisplayAcronmyActivity"
+        android:text="Acronym List"
         />
 
-
-    <Button android:id="@+id/food_menu"
+    <Button android:id="@+id/staff_offers"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="2"
-        android:text="Food Menu"
+        android:text="Staff Offers"
         />
 
 
-    <Button android:id="@+id/newsletter"
+    <Button android:id="@+id/food_menu"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="3"
-        android:text="Newsletter"
+        android:text="Food Menu"
         />
 
 
-    <Button android:id="@+id/activities"
+    <Button android:id="@+id/newsletter"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="4"
-        android:text="Activities"
+        android:text="Newsletter"
         />
 
 
-    <Button android:id="@+id/settings"
+    <Button android:id="@+id/activities"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="5"
+        android:text="Activities"
+        />
+
+
+    <Button android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_column="0"
+        android:layout_row="6"
         android:text="Settings"
         />
 

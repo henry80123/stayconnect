@@ -39,13 +39,13 @@ public class DataConnection {
     public void close()
     {
         dbHelper.close();
-        Log.d(tag, "DataConnection: Closing Connectionr");
+        Log.d(tag, "DataConnection: Closing Connection");
     }
 
     //--------------------  Return full Acronym List in alphabetical order ------------------
     public List<Acronym> getAllAcronym()
     {
-        Log.d(tag, "Inside getAllAcronym() " );
+        Log.d(tag, "Inside getAllAcronym()" );
 
         List<Acronym> AcronymList = new ArrayList<Acronym>();
 
