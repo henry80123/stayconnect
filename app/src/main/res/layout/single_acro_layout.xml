@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/AcronymLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Acronym: "/>
+
+    <TextView
+        android:id="@+id/AcronymValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  "
+        android:textSize="25sp"
+        android:layout_toRightOf="@+id/AcronymLabel"/>
+
+    <TextView
+        android:id="@+id/FullformLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Form: "
+        android:textSize="25sp"
+        android:layout_below="@+id/AcronymLabel"/>
+
+    <TextView
+        android:id="@+id/FFValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  "
+        android:textSize="25sp"
+        android:layout_below="@+id/AcronymValue"
+        android:layout_toRightOf="@+id/FullformLabel"/>
+
+    <TextView
+        android:id="@+id/DeptLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dept: "
+        android:textSize="25sp"
+        android:layout_below="@+id/FullformLabel"/>
+
+    <TextView
+        android:id="@+id/DeptValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  "
+        android:textSize="25sp"
+        android:layout_below="@+id/FFValue"
+        android:layout_toRightOf="@+id/DeptLabel" />
+
+
+
+</RelativeLayout>
