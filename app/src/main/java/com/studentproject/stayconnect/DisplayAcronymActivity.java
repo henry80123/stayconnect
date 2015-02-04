@@ -21,10 +21,10 @@ import java.util.List;
 public class DisplayAcronymActivity extends ListActivity {
 
 
-        final String tag = "DisplayAcronymActivity";
+        private final String tag = "DisplayAcronymActivity";
         private DataConnection dataConnection;
         EditText acronymSearch;
-        ArrayAdapter<Acronym> adapter;
+        private ArrayAdapter<Acronym> adapter;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class DisplayAcronymActivity extends ListActivity {
             setListAdapter(adapter);
 
             ListView lv = getListView();
+            //lv.setAdapter(new ArrayAdapter<Acronym>(this, android.R.layout.simple_list_item_1, values));
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
              //click on acronym to see its details

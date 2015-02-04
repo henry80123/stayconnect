@@ -8,10 +8,6 @@ import android.view.View;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String tag = "MainActivity";
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
         startActivity(i);
     }
 
-    public void toDisplayAcronmyActivity(View v){
+    public void toDisplayAcronymActivity(View v){
         Intent i = new Intent(getApplicationContext(), DisplayAcronymActivity.class);
         startActivity(i);
     }

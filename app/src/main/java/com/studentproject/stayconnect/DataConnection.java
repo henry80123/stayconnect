@@ -21,6 +21,8 @@ public class DataConnection {
 
     // Column names for Database
     private String[] Acronym_Col = { DatabaseUtil.acronym, DatabaseUtil.full_form, DatabaseUtil.dept };
+    //private String[] Doctor_Col = { DatabaseUtil.docName, DatabaseUtil.docAddress, DatabaseUtil.docTelephone, DatabaseUtil.docHours };
+
 
     public DataConnection(Context context)
     {
@@ -50,19 +52,19 @@ public class DataConnection {
         List<Acronym> AcronymList = new ArrayList<Acronym>();
 
         Log.d(tag, "getAllAcronym: Going to run query on database " );
-        Cursor cursor = database.query(DatabaseUtil.acronym_table,  Acronym_Col,  null, null, null, null, null);
-        Log.d(tag, "getAllAcronym: Number of acronyms returned: "+cursor.getCount() );
+        Cursor cursor1 = database.query(DatabaseUtil.acronym_table,  Acronym_Col,  null, null, null, null, null);
+        Log.d(tag, "getAllAcronym: Number of acronyms returned: "+cursor1.getCount() );
 
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
+        cursor1.moveToFirst();
+        while (!cursor1.isAfterLast()) {
             Acronym acro = new Acronym();
-            acro.setAcronym(cursor.getString(0));
-            acro.setFull_form(cursor.getString(1));
-            acro.setDept(cursor.getString(2));
+            acro.setAcronym(cursor1.getString(0));
+            acro.setFull_form(cursor1.getString(1));
+            acro.setDept(cursor1.getString(2));
             AcronymList.add(acro);
-            cursor.moveToNext();
+            cursor1.moveToNext();
         }
-        cursor.close();
+        cursor1.close();
 
         Collections.sort(AcronymList , new Comparator<Acronym>() {
             public int compare(Acronym a1, Acronym a2) {
@@ -75,8 +77,8 @@ public class DataConnection {
 
     //--------------------  Add Acronym to database  --------------------
     //----- Returns true if successful else return false ----------------
-    public Acronym registerAcronym(String acronym, String fullform,  String dept1 )
-    {
+        public Acronym registerAcronym(String acronym, String fullform,  String dept1 )
+        {
 
 
         ContentValues values = new ContentValues();
@@ -104,4 +106,3 @@ public class DataConnection {
 
 
 }
-

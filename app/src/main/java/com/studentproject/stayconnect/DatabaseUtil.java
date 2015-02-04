@@ -10,7 +10,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
 {
 
     final String tag="db";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 12;
     private static final String DATABASE_NAME = "appStorage.db";
 
 
@@ -28,6 +28,21 @@ public class DatabaseUtil extends SQLiteOpenHelper
 
     //------------------------------------------------------------------------------------
 
+    /*------------------------------ DOCTOR TABLE --------------------------------------
+
+    public static final String doctor_table = "doctor_table";
+
+    //DOCTOR TABLE COLUMNS names
+    public static final String docName = "docName";
+    public static final String docAddress = "docAddress";
+    public static final String docTelephone = "docTelephone";
+    public static final String docHours = "docHours";
+
+    private static final String create_doctor_table = "create table " + doctor_table + "(" + docName + " varchar primary key," +
+            docAddress + " text not null," + docTelephone + " integer not null," + docHours + " varchar" + ")";
+
+    //------------------------------------------------------------------------------------
+    */
 
     public DatabaseUtil(Context context)
     {
@@ -43,6 +58,9 @@ public class DatabaseUtil extends SQLiteOpenHelper
         Log.d(tag,"DatabaseUtil: Inside onCreate() ");
         database.execSQL(create_acronym);
         Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL:" + create_acronym);
+        //database.execSQL(create_doctor_table);
+        //Log.d(tag,"DatabaseUtil: Creating the Table Doctor \n SQL:" + create_doctor_table);
+
     }
 
     @Override
@@ -55,7 +73,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
         Log.d(tag,"DatabaseUtil: Finished to destroy data ");
 
         onCreate(db);
-        Log.d(tag,"DatabaseUtil: Finished to calling ONCREATE");
+        Log.d(tag,"DatabaseUtil: Finished to calling onCreate");
     }
 
 }
