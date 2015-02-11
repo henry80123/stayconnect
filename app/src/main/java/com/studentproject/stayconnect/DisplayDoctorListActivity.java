@@ -20,7 +20,7 @@ public class DisplayDoctorListActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.doctor_list_layout);
+        setContentView(R.layout.displaydoctorlist_layout);
         init();
     }
 

@@ -40,6 +40,7 @@ public class DataConnection {
     {
         dbHelper.close();
         Log.d(tag, "DataConnection: Closing Connection");
+
     }
 
     //--------------------  Return full Acronym List in alphabetical order ------------------
