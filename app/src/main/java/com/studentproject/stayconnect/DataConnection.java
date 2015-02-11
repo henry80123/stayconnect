@@ -21,8 +21,6 @@ public class DataConnection {
 
     // Column names for Database
     private String[] Acronym_Col = { DatabaseUtil.acronym, DatabaseUtil.full_form, DatabaseUtil.dept };
-    //private String[] Doctor_Col = { DatabaseUtil.docName, DatabaseUtil.docAddress, DatabaseUtil.docTelephone, DatabaseUtil.docHours };
-
 
     public DataConnection(Context context)
     {

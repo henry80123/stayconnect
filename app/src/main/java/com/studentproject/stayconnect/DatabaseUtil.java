@@ -10,7 +10,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
 {
 
     final String tag="db";
-    private static final int DATABASE_VERSION = 15;
+    private static final int DATABASE_VERSION = 17;
     private static final String DATABASE_NAME = "appStorage.db";
 
 
@@ -55,10 +55,10 @@ public class DatabaseUtil extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase database)
     {
-        //database.execSQL(DATABASE_CREATE);
         Log.d(tag,"DatabaseUtil: Inside onCreate() ");
         database.execSQL(create_acronym);
         Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL:" + create_acronym);
+
 
     }
 
