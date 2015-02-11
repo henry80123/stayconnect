@@ -33,13 +33,14 @@ public class DatabaseUtil extends SQLiteOpenHelper
     public static final String doctor_table = "doctor_table";
 
     //DOCTOR TABLE COLUMNS names
-    public static final String docName = "docName";
+    /*public static final String docName = "docName";
     public static final String docAddress = "docAddress";
     public static final String docTelephone = "docTelephone";
     public static final String docHours = "docHours";
+    public static final String
 
     private static final String create_doctor_table = "create table " + doctor_table + "(" + docName + " varchar primary key," +
-            docAddress + " text not null," + docTelephone + " integer not null," + docHours + " varchar" + ")";
+            docAddress + " text not null," + docTelephone + " integer not null," + docHours + " varchar" + ")";*/
 
     //------------------------------------------------------------------------------------
 
@@ -58,8 +59,6 @@ public class DatabaseUtil extends SQLiteOpenHelper
         Log.d(tag,"DatabaseUtil: Inside onCreate() ");
         database.execSQL(create_acronym);
         Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL:" + create_acronym);
-        Log.d(tag,"DatabaseUtil: Creating the Table Doctor \n SQL:" + create_doctor_table);
-        database.execSQL(create_doctor_table);
 
     }
 

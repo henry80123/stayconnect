@@ -25,6 +25,11 @@ public class MainActivity extends ActionBarActivity {
         startActivity(i);
     }
 
+    public void toDoctorListActivity(View v){
+        Intent i = new Intent(getApplicationContext(), DisplayDoctorListActivity.class);
+        startActivity(i);
+    }
+
 
 }
 
