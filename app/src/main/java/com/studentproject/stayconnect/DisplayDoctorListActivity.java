@@ -2,46 +2,44 @@ package com.studentproject.stayconnect;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.webkit.DownloadListener;
-import android.webkit.WebSettings;
+import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
+import android.widget.Toast;
+
 /**
- * Created by Paul on 11/2/15.
+ * Created by HenryChiang on 15-02-23.
  */
 public class DisplayDoctorListActivity extends Activity {
 
     private WebView mWebView;
+    private String whichOne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.displaydoctorlist_layout);
-        init();
+        setContentView(R.layout.display_doctorlist_layout);
+        Intent i = getIntent();
+        initLoadPDF(i.getStringExtra("url"));
     }
 
-    private void init() {
+    private void initLoadPDF(String url) {
         mWebView = (WebView) findViewById(R.id.doctorList_webView);
-        loadPDF();
-    }
-
-    private void loadPDF() {
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setLoadWithOverviewMode(true);
         mWebView.getSettings().setUseWideViewPort(true);
-        mWebView.loadUrl("http://docs.google.com/gview?embedded=true&url=http://www.stagecoachbus.com/PdfUploads/Timetable_28768_5.pdf");
-
-
+        mWebView.getSettings().setSupportZoom(true);
+        mWebView.getSettings().setBuiltInZoomControls(true);
+        mWebView.getSettings().setDisplayZoomControls(false);
+        mWebView.loadUrl(url);
+        Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
 
     }
 
+    @Override
+    public void finish() {
+        ViewGroup view = (ViewGroup) getWindow().getDecorView();
+        view.removeAllViews();
+        super.finish();
+    }
 }
-
-
-
-

@@ -52,7 +52,7 @@ public class DataConnection {
 
         Log.d(tag, "getAllAcronym: Going to run query on database " );
         Cursor cursor1 = database.query(DatabaseUtil.acronym_table,  Acronym_Col,  null, null, null, null, null);
-        Log.d(tag, "getAllAcronym: Number of acronyms returned: "+cursor1.getCount() );
+        Log.d(tag, "getAllAcronym: Number of acronyms returned: " + cursor1.getCount() );
 
         cursor1.moveToFirst();
         while (!cursor1.isAfterLast()) {
@@ -101,7 +101,12 @@ public class DataConnection {
             Log.d(tag, "registerAcronym() : Acronym already exists" );
             return null;
         }
-    }
+
+        }
+
+
+
+
 
 
 

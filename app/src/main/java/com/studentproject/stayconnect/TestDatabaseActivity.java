@@ -51,7 +51,6 @@ public class TestDatabaseActivity extends ListActivity {
 
                 String num = ((TextView) view).getText().toString();
 
-
                 i.putExtra("acronym", num);
                 startActivity(i);
 

@@ -10,7 +10,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
 {
 
     final String tag="db";
-    private static final int DATABASE_VERSION = 17;
+    private static final int DATABASE_VERSION = 19;
     private static final String DATABASE_NAME = "appStorage.db";
 
 
