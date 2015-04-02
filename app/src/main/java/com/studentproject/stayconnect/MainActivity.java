@@ -1,13 +1,11 @@
 package com.studentproject.stayconnect;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 ///
-import java.net.HttpURLConnection;
-import java.net.URL;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -17,7 +15,7 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
 
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
@@ -28,10 +26,12 @@ public class MainActivity extends ActionBarActivity {
     private String regid;
     final String gcmLog= "GCM";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_menu_layout);
 
         if (checkPlayServices()) {
             gcm = GoogleCloudMessaging.getInstance(this);
@@ -135,6 +135,7 @@ public class MainActivity extends ActionBarActivity {
         Intent i = new Intent(getApplicationContext(), DoctorListActivity.class);
         startActivity(i);
     }
+
 
 
 }

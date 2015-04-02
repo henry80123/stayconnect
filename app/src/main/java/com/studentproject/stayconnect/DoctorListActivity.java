@@ -8,7 +8,7 @@ import android.view.View;
 /**
  * Created by Paul on 11/2/15.
  */
-public class DoctorListActivity extends Activity {
+public class DoctorListActivity extends Activity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +21,17 @@ public class DoctorListActivity extends Activity {
         switch (v.getId()) {
             case R.id.one:
                 i = new Intent(getApplicationContext(), DisplayDoctorListActivity.class);
-                i.putExtra("url","http://docs.google.com/gview?embedded=true&url=http://www.stagecoachbus.com/PdfUploads/Timetable_28768_5.pdf");
+                i.putExtra("url","http://mozilla.github.io/pdf.js/web/viewer.html");
                 startActivity(i);
                 break;
             case R.id.two:
                 i = new Intent(getApplicationContext(), DisplayDoctorListActivity.class);
-                i.putExtra("url","http://docs.google.com/gview?embedded=true&url=http://www.stagecoachbus.com/PdfUploads/Timetable_28768_5.pdf");
+                i.putExtra("url","http://192.168.0.102/examples/helloworld/index.html");
                 startActivity(i);
                 break;
             case R.id.three:
                 i = new Intent(getApplicationContext(), DisplayDoctorListActivity.class);
-                i.putExtra("url","http://docs.google.com/gview?embedded=true&url=http://www.stagecoachbus.com/PdfUploads/Timetable_28768_5.pdf");
+                i.putExtra("url","http://mozilla.github.io/pdf.js/examples/learning/prevnext.html");
                 startActivity(i);
                 break;
             case R.id.four:

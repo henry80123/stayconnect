@@ -30,17 +30,15 @@ public class DatabaseUtil extends SQLiteOpenHelper
 
     //------------------------------ DOCTOR TABLE --------------------------------------
 
-    public static final String doctor_table = "doctor_table";
+    public static final String pdf_table = "pdf_table";
 
     //DOCTOR TABLE COLUMNS names
-    /*public static final String docName = "docName";
-    public static final String docAddress = "docAddress";
-    public static final String docTelephone = "docTelephone";
-    public static final String docHours = "docHours";
-    public static final String
+    public static final String pdfName = "pdfName";
+    public static final String pdfBlob = "pdfBlob";
 
-    private static final String create_doctor_table = "create table " + doctor_table + "(" + docName + " varchar primary key," +
-            docAddress + " text not null," + docTelephone + " integer not null," + docHours + " varchar" + ")";*/
+
+    private static final String create_pdf_table = "create table " + pdf_table + "(" + pdfName + " varchar primary key," +
+            pdfBlob + " blob not null"+ ")";
 
     //------------------------------------------------------------------------------------
 
@@ -56,6 +54,8 @@ public class DatabaseUtil extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase database)
     {
         Log.d(tag,"DatabaseUtil: Inside onCreate() ");
+        database.execSQL(create_pdf_table);
+        Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL:" + create_pdf_table);
         database.execSQL(create_acronym);
         Log.d(tag,"DatabaseUtil: Creating the Table Acronym \n SQL:" + create_acronym);
 
@@ -69,7 +69,7 @@ public class DatabaseUtil extends SQLiteOpenHelper
         Log.d(tag,"DatabaseUtil: Starting to destroy data ");
 
         db.execSQL("DROP TABLE IF EXISTS " + acronym_table);
-        db.execSQL("DROP TABLE IF EXISTS " + doctor_table);
+        db.execSQL("DROP TABLE IF EXISTS " + pdf_table);
         Log.d(tag,"DatabaseUtil: Finished to destroy data ");
 
 

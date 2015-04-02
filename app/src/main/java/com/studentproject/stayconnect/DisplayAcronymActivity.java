@@ -52,6 +52,7 @@ public class DisplayAcronymActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_acronym_layout);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         accessWebService(url);
 
         /* ---------------------

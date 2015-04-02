@@ -7,7 +7,9 @@
     android:columnCount="1"
     android:rowCount="7"
     android:orientation="vertical"
-    tools:context=".GridXMLActivity" >
+    tools:context=".GridXMLActivity"
+
+    >
 
     <Button android:id="@+id/database_testing"
         android:layout_width="match_parent"
@@ -88,7 +90,7 @@
         />
 
 
-    <Button android:id="@+id/settings"
+    <Button android:id="@+id/pdftesting"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginBottom="5dp"
@@ -97,7 +99,8 @@
         android:layout_marginRight="10dp"
         android:layout_column="0"
         android:layout_row="6"
-        android:text="Settings"
+        android:text="PDFTesting"
+        android:onClick=""
         />
 
 
