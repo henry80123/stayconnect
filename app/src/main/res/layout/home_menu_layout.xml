@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+
+
+        >
+
+
+    <ImageView android:id="@+id/newsletter"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:onClick="toTestDatabaseActivity"
+        android:src="@drawable/newsletters"
+        android:layout_margin="20dp"
+        />
+
+    <ImageView android:id="@+id/announcement"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:onClick="toTestDatabaseActivity"
+        android:src="@drawable/announcements"
+        android:layout_margin="20dp"
+
+
+        />
+    <ImageView android:id="@+id/event"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:onClick="toTestDatabaseActivity"
+        android:src="@drawable/event"
+        android:layout_margin="20dp"
+
+
+        />
+
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Newsletters"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Newsletters"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Newsletters"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+
+
+        >
+
+
+        <ImageView android:id="@+id/offers"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:onClick="toTestDatabaseActivity"
+            android:src="@drawable/staff_offers1"
+            android:layout_margin="20dp"
+
+            />
+
+        <ImageView android:id="@+id/food"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toTestDatabaseActivity"
+            android:src="@drawable/food_menu1"
+            android:layout_margin="20dp"
+
+
+            />
+        <ImageView android:id="@+id/doctor"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toDoctorListActivity"
+            android:src="@drawable/doctor2"
+            android:layout_margin="20dp"
+
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+
+
+        >
+
+
+        <ImageView android:id="@+id/acronym"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:onClick="toDisplayAcronymActivity"
+            android:src="@drawable/acronym"
+            android:layout_margin="20dp"
+
+
+            />
+
+        <ImageView android:id="@+id/shuttle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toTestDatabaseActivity"
+            android:src="@drawable/newsletters"
+            android:layout_margin="20dp"
+
+
+            />
+        <ImageView android:id="@+id/settings"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toTestDatabaseActivity"
+            android:src="@drawable/settings1"
+            android:layout_margin="20dp"
+
+
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
