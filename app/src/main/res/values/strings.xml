@@ -12,5 +12,10 @@
     <string name="login_fail_alert_btn2">How to Register</string>
     <string name="login_reg_msg">Something about how to register...</string>
     <string name="login_reg_btn">Got it!</string>
+    <string name="action_logout_btn">Log Out</string>
+    <string name="logout_alert_msg">Are you sure you want to log out?</string>
+    <string name="logout_alert_btn1">Yes</string>
+    <string name="logout_alert_btn2">No</string>
+
 
 </resources>

@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -27,7 +26,6 @@ import android.widget.TextView;
 public class LoadScreenActivity extends Activity {
 
     private static final String tag = "LoadScreen";
-    private ProgressBar spinner;
     private EditText username;
     private EditText pw;
     private TextView appname;
@@ -148,6 +146,7 @@ public class LoadScreenActivity extends Activity {
                 public void onClick(DialogInterface arg0, int arg1) {
                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(i);
+                    finish();
                 }
             });
             //For login successfully
@@ -218,6 +217,7 @@ public class LoadScreenActivity extends Activity {
                 } else {
                     lp.setMargins(0, marginTop, 0, 0);
                     logo.setLayoutParams(lp);
+
                 }
             }
         });
