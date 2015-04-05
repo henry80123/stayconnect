@@ -6,6 +6,7 @@
     android:paddingLeft="50dp"
     android:paddingRight="50dp"
     android:id="@+id/activityRoot"
+
     >
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,16 +15,15 @@
     tools:context=".MainActivity" -->
 
 
-
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/puzzle_logo"
+        android:src="@drawable/puzzle_logo2"
         android:id="@+id/startscreen_image"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
-        android:paddingTop="10dp"
+        android:layout_marginTop="120dp"
+        android:clickable="true"
         />
 
 
@@ -36,6 +36,7 @@
         android:textSize="32sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/startscreen_image"
+        android:layout_marginTop="30dp"
 
 
         />
@@ -49,6 +50,8 @@
         android:hint="Username"
         android:layout_centerHorizontal="true"
         android:singleLine="true"
+        android:layout_marginTop="30dp"
+
 
 
         />
@@ -77,9 +80,11 @@
         android:layout_centerHorizontal="true"
         android:onClick="toLoginDialog"
         android:background="@color/button_color"
-
+        android:layout_marginTop="15dp"
 
 
         />
+
+
 
 </RelativeLayout>

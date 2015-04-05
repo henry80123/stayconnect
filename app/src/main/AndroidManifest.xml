@@ -17,11 +17,14 @@
         android:allowBackup="true"
         android:icon="@drawable/puzzle_large"
         android:label="StayConnect"
-        android:theme="@style/CustomActionBarTheme" >
+        android:theme="@style/CustomActionBarTheme"
+        >
         <activity
             android:name=".LoadScreenActivity"
             android:label="@string/app_name"
-            android:theme="@style/NoActionBar">
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -34,6 +37,8 @@
             android:name=".TestDatabaseActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.studentproject.stayconnect.MainActivity"
+            android:screenOrientation="portrait"
+
 
             >
             <intent-filter>
@@ -44,6 +49,8 @@
             android:name=".SingleAcronymActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.studentproject.stayconnect.DisplayAcronymActivity"
+            android:screenOrientation="portrait"
+
 
             >
             <intent-filter>
@@ -55,6 +62,8 @@
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden"
             android:parentActivityName="com.studentproject.stayconnect.MainActivity"
+            android:screenOrientation="portrait"
+
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -64,6 +73,8 @@
             android:name=".DisplayDoctorListActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.studentproject.stayconnect.DoctorListActivity"
+            android:screenOrientation="portrait"
+
 
             >
             <intent-filter>
@@ -73,6 +84,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
+
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,6 +96,8 @@
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden"
             android:parentActivityName="com.studentproject.stayconnect.MainActivity"
+            android:screenOrientation="portrait"
+
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
