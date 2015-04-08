@@ -55,8 +55,8 @@ public class GcmIntentService extends IntentService {
                 .setBigContentTitle(title);
 
         //Set Up New Notification
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-        .setSmallIcon(R.drawable.startscreen)
+        NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(this)
+        .setSmallIcon(R.drawable.puzzle_logo2)
         .setTicker("New message")
         .setContentTitle(title)
         .setContentText(msg)
@@ -64,11 +64,12 @@ public class GcmIntentService extends IntentService {
         .setDefaults(Notification.DEFAULT_ALL)
         .setContentIntent(contentIntent)
         .setStyle(bigTextStyle);
+
         //mBuilder.build();
 
         //Viewing
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+        mNotificationManager.notify(NOTIFICATION_ID, nBuilder.build());
     }
 
 }

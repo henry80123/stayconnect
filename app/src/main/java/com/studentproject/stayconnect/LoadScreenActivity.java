@@ -76,10 +76,10 @@ public class LoadScreenActivity extends Activity {
             //anim_login_btn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.launch_appname);
 
             //move the screen up when keyboard pops up.
-            lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             logo = (ImageView)findViewById(R.id.startscreen_image);
             marginTop = getResources().getDimensionPixelSize(R.dimen.margin_top);
-            lp.addRule(RelativeLayout.CENTER_HORIZONTAL,logo.getId());
+
 
 
 
@@ -132,6 +132,8 @@ public class LoadScreenActivity extends Activity {
             buttonEffect(loginBtn);
             imageEffect();
             moveScreenUp();
+
+
 
 
     }
@@ -211,13 +213,26 @@ public class LoadScreenActivity extends Activity {
                 Rect r = new Rect();
                 activityRootView.getWindowVisibleDisplayFrame(r);
                 int heightDiff = activityRootView.getRootView().getHeight() - r.bottom;
+
                 if (heightDiff > 100) {
                     lp.setMargins(0, 0, 0, 0);
                     logo.setLayoutParams(lp);
+
                 } else {
                     lp.setMargins(0, marginTop, 0, 0);
                     logo.setLayoutParams(lp);
 
+
+                }
+
+                if (pw.getText().toString().length() < 4){
+                    loginBtn.setEnabled(false);
+                    loginBtn.setClickable(false);
+                    loginBtn.setAlpha(.3f);
+                }else {
+                    loginBtn.setEnabled(true);
+                    loginBtn.setClickable(true);
+                    loginBtn.setAlpha(1.0f);
                 }
             }
         });
@@ -232,11 +247,13 @@ public class LoadScreenActivity extends Activity {
                     case MotionEvent.ACTION_DOWN:
                         v.getBackground().setColorFilter(0xe02ca491, PorterDuff.Mode.SRC_ATOP);
                         v.invalidate();
+
                         break;
 
                     case MotionEvent.ACTION_UP:
                         v.getBackground().clearColorFilter();
                         v.invalidate();
+
                         break;
 
                     case MotionEvent.ACTION_CANCEL:

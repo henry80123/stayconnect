@@ -176,7 +176,6 @@ public class MainActivity extends Activity {
 
     }
 
-
     public void toTestDatabaseActivity(View v){
         Intent i = new Intent(getApplicationContext(),TestDatabaseActivity.class);
         startActivity(i);
@@ -189,6 +188,11 @@ public class MainActivity extends Activity {
 
     public void toDoctorListActivity(View v){
         Intent i = new Intent(getApplicationContext(), DoctorListActivity.class);
+        startActivity(i);
+    }
+
+    public void toDisplayNotification(View v){
+        Intent i = new Intent(getApplicationContext(), DisplayNotificationActivity.class);
         startActivity(i);
     }
 
