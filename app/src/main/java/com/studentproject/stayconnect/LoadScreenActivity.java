@@ -205,6 +205,7 @@ public class LoadScreenActivity extends Activity {
 
     }
 
+    //move screen up when keyboard pops up and also add disable "Log In" button with password length less than 4.
     public void moveScreenUp(){
         final View activityRootView = findViewById(R.id.activityRoot);
         activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
