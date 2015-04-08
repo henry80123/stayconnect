@@ -6,5 +6,6 @@ package com.studentproject.stayconnect;
 public class TestClasss {
 
    public int x;
+    public String xx;
 
 }
