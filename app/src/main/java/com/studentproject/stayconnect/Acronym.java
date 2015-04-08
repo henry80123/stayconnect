@@ -2,7 +2,7 @@ package com.studentproject.stayconnect;
 
 public class Acronym {
 
-    private int Koushal;
+    private int Kousha;
     private String acronym;
     private String full_form;
     private String dept;
